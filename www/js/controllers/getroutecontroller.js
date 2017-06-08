@@ -1,7 +1,8 @@
 angular.module('gmapassignment')
 
-.controller('generateRouteCtrl', function($scope) {
+.controller('generateRouteCtrl', function($scope,$http) {
 
+/***api starts****/
 	 // $http({
   //   method: 'POST',
   //   url: 'https://api.flightmap.io/api/v1/vrp',
@@ -11,16 +12,16 @@ angular.module('gmapassignment')
   // },
   //  rejectUnauthorized: false,
   //  body: '{"service":[{"id":"8627","lat":30.7274460947,"lng":76.797384358943,"name":"8627","duration":5}],"fleet":[{"id":1,"lat":30.7188978,"lng":76.8102981,"latEnd":30.7188978,"lngEnd":76.8102981,"returnToStart":0}],"maxVisits":6,"polylines":false,"distanceCalculation":false,"speed":40,"decideFleetSize":1}'
-  // }).then(function(res){
-  //         console.log("successfully");
+  // }).then(function(response){
+  //         console.log("successfully"+response.data);
   //   }, function(error){
   //      console.log(error);
   //      alert(error.data);
   //   });
- 
+ /***api ends****/
     // RouteService.routeserv().then(function(response){
     //    console.log(response.data)
-    // });
+  
  
 $scope.initialise=function() {
     var myLatlng = new google.maps.LatLng(51.65905179951626, 7.3835928124999555);
